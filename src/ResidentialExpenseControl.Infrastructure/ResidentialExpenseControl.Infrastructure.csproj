@@ -16,8 +16,4 @@
     <ProjectReference Include="..\ResidentialExpenseControl.Domain\ResidentialExpenseControl.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Context\" />
-  </ItemGroup>
-
 </Project>
