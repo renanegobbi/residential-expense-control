@@ -1,9 +1,18 @@
 
+using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using ResidentialExpenseControl.Infrastructure.Context;
+using ResidentialExpenseControl.Infrastructure.Seed;
+using System.Threading.Tasks;
+
 namespace ResidentialExpenseControl.Api
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +23,20 @@ namespace ResidentialExpenseControl.Api
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddDbContext<ResidentialExpenseControlContext>(options =>
+            {
+                var cs = builder.Configuration.GetConnectionString("DefaultConnection");
+                options.UseSqlite(cs);
+            });
+
             var app = builder.Build();
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var db = scope.ServiceProvider.GetRequiredService<ResidentialExpenseControlContext>();
+                await db.Database.MigrateAsync();
+                await DatabaseSeeder.SeedAsync(db);
+            }
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
