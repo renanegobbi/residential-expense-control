@@ -1,11 +1,7 @@
 
 using Microsoft.AspNetCore.Builder;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using ResidentialExpenseControl.Infrastructure.Context;
-using ResidentialExpenseControl.Infrastructure.Seed;
+using ResidentialExpenseControl.Api.Configuration;
 using System.Threading.Tasks;
 
 namespace ResidentialExpenseControl.Api
@@ -16,43 +12,27 @@ namespace ResidentialExpenseControl.Api
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            builder.Services.AddApiConfiguration(builder.Configuration);
 
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            builder.Services.ResolveDependencies();
+
             builder.Services.AddEndpointsApiExplorer();
+
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddDbContext<ResidentialExpenseControlContext>(options =>
-            {
-                var cs = builder.Configuration.GetConnectionString("DefaultConnection");
-                options.UseSqlite(cs);
-            });
+            builder.Services.AddSwaggeConfiguration();
+
 
             var app = builder.Build();
 
-            using (var scope = app.Services.CreateScope())
-            {
-                var db = scope.ServiceProvider.GetRequiredService<ResidentialExpenseControlContext>();
-                await db.Database.MigrateAsync();
-                await DatabaseSeeder.SeedAsync(db);
-            }
+            await app.UseDatabaseMigration(app);
 
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
+            app.UseApiConfiguration(app.Environment, app.Configuration);
 
-            app.UseHttpsRedirection();
-
-            app.UseAuthorization();
-
-
-            app.MapControllers();
+            app.UseSwaggerConfiguration(app.Environment);
 
             app.Run();
         }
+
     }
 }
