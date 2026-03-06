@@ -271,12 +271,12 @@ Apresenta um resumo financeiro com totais de receitas, despesas e saldo consolid
 
 # 4. Como usar
 
-4.1 Clonar o repositório
+### 4.1 Clonar o repositório
 ```bash
 git clone https://github.com/renanegobbi/residential-expense-control.git
 ```
 
-4.1.1 Acessar a pasta do projeto
+### 4.1.1 Acessar a pasta do projeto
 ```bash
 cd residential-expense-control
 ```
