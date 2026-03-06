@@ -4,14 +4,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
 using ResidentialExpenseControl.Api.Filters;
 using ResidentialExpenseControl.Infrastructure.Context;
-using System.Globalization;
-using Newtonsoft.Json;
-using System.Text.Json.Serialization;
 using ResidentialExpenseControl.Infrastructure.Seed;
+using System.Globalization;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Hosting;
 
 namespace ResidentialExpenseControl.Api.Configuration
 {
@@ -45,6 +45,19 @@ namespace ResidentialExpenseControl.Api.Configuration
 
             services.AddDbContext<ResidentialExpenseControlContext>(options =>
                 options.UseSqlite(configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddApiVersioning(options =>
+            {
+                options.AssumeDefaultVersionWhenUnspecified = true;
+                options.DefaultApiVersion = new ApiVersion(1, 0);
+                options.ReportApiVersions = true;
+            });
+
+            services.AddVersionedApiExplorer(options =>
+            {
+                options.GroupNameFormat = "'v'VVV";
+                options.SubstituteApiVersionInUrl = true;
+            });
 
             services.Configure<ApiBehaviorOptions>(options =>
                 options.SuppressModelStateInvalidFilter = true
@@ -81,6 +94,8 @@ namespace ResidentialExpenseControl.Api.Configuration
 
             CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
             CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+
+            app.UsePathBase("/api");
 
             app.UseRouting();
 
