@@ -19,6 +19,7 @@ Sistema completo de gestão de despesas residenciais com .NET 8 Web API, EF Core
 
 - [4. Como usar](#4-como-usar)
   - [4.1 Clonar o repositório](#41-clonar-o-repositório)
+    - [4.1.1 Acessar a pasta do projeto](#411-acessar-a-pasta-do-projeto ) 
   - [4.2 Executando o Backend (API)](#42-executando-o-backend-api)
     - [4.2.1 Visual Studio](#421-visual-studio)
     - [4.2.2 .NET CLI](#422-net-cli)
