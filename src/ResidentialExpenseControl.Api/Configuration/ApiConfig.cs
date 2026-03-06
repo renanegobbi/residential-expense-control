@@ -10,6 +10,7 @@ using ResidentialExpenseControl.Api.Filters;
 using ResidentialExpenseControl.Infrastructure.Context;
 using ResidentialExpenseControl.Infrastructure.Seed;
 using System.Globalization;
+using System.IO;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
@@ -43,8 +44,17 @@ namespace ResidentialExpenseControl.Api.Configuration
                 .AddJsonOptions(options =>
                 options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 
-            services.AddDbContext<ResidentialExpenseControlContext>(options =>
-                options.UseSqlite(configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ResidentialExpenseControlContext>((serviceProvider, options) =>
+            {
+                var env = serviceProvider.GetRequiredService<IWebHostEnvironment>();
+
+                var dataFolder = Path.Combine(env.ContentRootPath, "data");
+                Directory.CreateDirectory(dataFolder);
+
+                var databasePath = Path.Combine(dataFolder, "residential-expense.db");
+
+                options.UseSqlite($"Data Source={databasePath}");
+            });
 
             services.AddApiVersioning(options =>
             {
