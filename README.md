@@ -1,4 +1,4 @@
-# residential-expense-control
+# Controle de despesas residenciais
 Sistema completo de gestão de despesas residenciais com .NET 8 Web API, EF Core, SQLite e React (TypeScript).
 
 <h4 align="center"> 
@@ -52,3 +52,19 @@ Ferramentas utilizadas:
 
 - **Visual Studio Code** – Editor utilizado para desenvolvimento do frontend.
 - **Node.js / npm** – Gerenciamento de dependências e execução da aplicação.
+
+
+## Estrutura do projeto
+
+residential-expense-control
+│
+├── src
+│   ├── ResidentialExpenseControl.Api
+│   ├── ResidentialExpenseControl.Core
+│   ├── ResidentialExpenseControl.Domain
+│   └── ResidentialExpenseControl.Infrastructure
+│
+├── frontend
+│   └── personal-finances
+│
+└── README.md
