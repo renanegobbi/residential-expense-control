@@ -104,7 +104,6 @@ A aplicação foi desenvolvida utilizando **ASP.NET Core Web API** no backend e 
 
 ```bash
 git clone https://github.com/seu-usuario/residential-expense-control.git
-cd residential-expense-control
 ```
 
 ## Licença
