@@ -56,15 +56,45 @@ Ferramentas utilizadas:
 
 ## Estrutura do projeto
 
-residential-expense-control
-│
-├── src
-│   ├── ResidentialExpenseControl.Api
-│   ├── ResidentialExpenseControl.Core
-│   ├── ResidentialExpenseControl.Domain
-│   └── ResidentialExpenseControl.Infrastructure
-│
-├── frontend
-│   └── personal-finances
-│
-└── README.md
+## Sobre o projeto
+
+O **Residential Expense Control** é uma aplicação full stack desenvolvida para gerenciamento de despesas e receitas residenciais.
+
+O sistema permite registrar pessoas, categorias e transações financeiras, possibilitando o controle de receitas, despesas e o saldo financeiro de cada pessoa.
+
+A aplicação foi desenvolvida utilizando **ASP.NET Core Web API** no backend e **React com TypeScript** no frontend, seguindo boas práticas de organização de código e separação de responsabilidades.
+
+### Funcionalidades implementadas
+
+- Cadastro de pessoas
+  - criação
+  - edição
+  - remoção
+  - listagem
+
+- Cadastro de categorias
+  - criação
+  - listagem
+
+- Cadastro de transações
+  - criação
+  - listagem
+  - validação de tipo de transação (receita ou despesa)
+  - validação da finalidade da categoria
+
+- Consulta de totais por pessoa
+  - total de receitas
+  - total de despesas
+  - saldo final
+
+- Consulta de totais por categoria
+  - total de receitas
+  - total de despesas
+  - saldo final
+
+### Regras de negócio
+
+- Pessoas menores de 18 anos **podem registrar apenas despesas**.
+- O tipo da transação deve ser compatível com a finalidade da categoria.
+- Ao remover uma pessoa, todas as suas transações também são removidas.
+
