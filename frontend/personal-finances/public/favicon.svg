@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Finance Chart</title>
+  <rect width="64" height="64" rx="14" fill="#0F172A"></rect>
+  <!-- bars -->
+  <rect x="16" y="34" width="6" height="14" rx="2" fill="#FFFFFF" opacity="0.95"></rect>
+  <rect x="28" y="28" width="6" height="20" rx="2" fill="#FFFFFF" opacity="0.95"></rect>
+  <rect x="40" y="22" width="6" height="26" rx="2" fill="#FFFFFF" opacity="0.95"></rect>
+  <!-- trend line -->
+  <path d="M16 30 L27 25 L31 27 L41 18 L48 21" fill="none" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+  <!-- arrow head -->
+  <path d="M48 21 L47 15 L53 18" fill="none" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
