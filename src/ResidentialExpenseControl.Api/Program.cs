@@ -1,5 +1,5 @@
-
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.DependencyInjection;
 using ResidentialExpenseControl.Api.Configuration;
 using System.Threading.Tasks;
@@ -29,7 +29,8 @@ namespace ResidentialExpenseControl.Api
 
             app.UseApiConfiguration(app.Environment, app.Configuration);
 
-            app.UseSwaggerConfiguration(app.Environment);
+            var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+            app.UseSwaggerConfiguration(provider, app.Environment);
 
             app.Run();
         }

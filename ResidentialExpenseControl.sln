@@ -11,6 +11,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Building Blocks", "Building
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResidentialExpenseControl.Core", "src\ResidentialExpenseControl.Core\ResidentialExpenseControl.Core.csproj", "{20096023-03F0-43FA-B949-03A28C3C12E6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{2F9A0410-E5C5-4012-8156-04D1CA00EAC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResidentialExpenseControl.Infrastructure", "src\ResidentialExpenseControl.Infrastructure\ResidentialExpenseControl.Infrastructure.csproj", "{DF125315-B59A-4AC0-8DE4-CE1725C8ADA6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apí", "Apí", "{AC7A6C0F-984E-4C91-AAC0-E09C5BB371B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResidentialExpenseControl.Api", "src\ResidentialExpenseControl.Api\ResidentialExpenseControl.Api.csproj", "{1AFBAC55-5830-4050-B17F-5FFD6964137A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +33,14 @@ Global
 		{20096023-03F0-43FA-B949-03A28C3C12E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20096023-03F0-43FA-B949-03A28C3C12E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20096023-03F0-43FA-B949-03A28C3C12E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF125315-B59A-4AC0-8DE4-CE1725C8ADA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF125315-B59A-4AC0-8DE4-CE1725C8ADA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF125315-B59A-4AC0-8DE4-CE1725C8ADA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF125315-B59A-4AC0-8DE4-CE1725C8ADA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AFBAC55-5830-4050-B17F-5FFD6964137A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AFBAC55-5830-4050-B17F-5FFD6964137A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AFBAC55-5830-4050-B17F-5FFD6964137A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AFBAC55-5830-4050-B17F-5FFD6964137A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +48,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E2A2DD73-31AA-4FC4-9B9D-8FF83C249B69} = {7806B153-C9C2-4979-89C9-DFF46D7181F1}
 		{20096023-03F0-43FA-B949-03A28C3C12E6} = {858D96A4-18B2-4866-A089-27B98151600A}
+		{DF125315-B59A-4AC0-8DE4-CE1725C8ADA6} = {2F9A0410-E5C5-4012-8156-04D1CA00EAC5}
+		{1AFBAC55-5830-4050-B17F-5FFD6964137A} = {AC7A6C0F-984E-4C91-AAC0-E09C5BB371B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1B64FAB0-A720-4FCF-9944-642A2446DB79}

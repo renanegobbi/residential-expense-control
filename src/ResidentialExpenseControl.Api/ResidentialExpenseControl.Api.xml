@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ResidentialExpenseControl.Api</name>
+    </assembly>
+    <members>
+        <member name="T:ResidentialExpenseControl.Api.BadRequestApiResponse">
+            <summary>
+            Standard API response for HTTP error 400
+            </summary>
+        </member>
+        <member name="T:ResidentialExpenseControl.Api.ApiResult">
+            <summary>
+            Default result for all API routes
+            </summary>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.CategoryController.SearchCategories(ResidentialExpenseControl.Api.ViewModels.Category.SearchCategoryViewModel)">
+            <summary>
+            Retrieves categories based on the provided search parameters.
+            </summary>
+            <remarks>
+            Notes:
+            <ul>
+                <li>This endpoint does not require authentication.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.CategoryController.GetCategoryById(System.Int32)">
+            <summary>
+            Gets a category by its ID.
+            </summary>
+            <remarks>Notes:
+            <ul>
+                <li>To access this route, it is not necessary to be logged into the system.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.CategoryController.CreateCategory(ResidentialExpenseControl.Api.ViewModels.Category.CreateCategoryViewModel)">
+            <summary>
+            Creates a new category in the database.
+            </summary>
+            <remarks>
+            Notes:
+            <ul>
+                <li>This endpoint does not require authentication.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.CategoryController.UpdateCategory(ResidentialExpenseControl.Api.ViewModels.Category.UpdateCategoryViewModel)">
+            <summary>
+            Updates a category in the database.
+            </summary>
+            <remarks>Notes:
+            <ul>
+                <li>To access this route, it is not necessary to be logged into the system.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.CategoryController.DeleteCategory(System.Int32)">
+            <summary>
+            Deletes a category from the database.
+            </summary>
+            <remarks>Notes:
+            <ul>
+                <li>To access this route, it is not necessary to be logged into the system.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.PeopleController.SearchPeople(ResidentialExpenseControl.Api.ViewModels.People.SearchPeopleViewModel)">
+            <summary>
+            Retrieves people based on the provided search parameters.
+            </summary>
+            <remarks>
+            Notes:
+            <ul>
+                <li>This endpoint does not require authentication.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.PeopleController.GetPersonById(System.Int32)">
+            <summary>
+            Gets a person by its ID.
+            </summary>
+            <remarks>Notes:
+            <ul>
+                <li>To access this route, it is not necessary to be logged into the system.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.PeopleController.CreatePerson(ResidentialExpenseControl.Api.ViewModels.People.CreatePersonViewModel)">
+            <summary>
+            Creates a new person in the database.
+            </summary>
+            <remarks>Notes:
+            <ul>
+                <li>To access this route, it is not necessary to be logged into the system.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.PeopleController.UpdatePerson(ResidentialExpenseControl.Api.ViewModels.People.UpdatePersonViewModel)">
+            <summary>
+            Updates a person in the database.
+            </summary>
+            <remarks>Notes:
+            <ul>
+                <li>To access this route, it is not necessary to be logged into the system.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.PeopleController.DeletePerson(System.Int32)">
+            <summary>
+            Deletes a person from the database.
+            </summary>
+            <remarks>Notes:
+            <ul>
+                <li>To access this route, it is not necessary to be logged into the system.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.TotalsController.GetTotalsByPeople(ResidentialExpenseControl.Api.ViewModels.Totals.TotalsFilterByPeopleViewModel)">
+            <summary>
+            Get financial totals per person.
+            </summary>
+            <remarks>Notes:
+            <ul>
+                <li>To access this route, it is not necessary to be logged into the system.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.TotalsController.GetTotalsByCategory(ResidentialExpenseControl.Api.ViewModels.Totals.TotalsFilterByCategoryViewModel)">
+            <summary>
+            Get financial totals per category.
+            </summary>
+            <remarks>Notes:
+            <ul>
+                <li>To access this route, it is not necessary to be logged into the system.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.TransactionController.SearchTransactions(ResidentialExpenseControl.Api.ViewModels.Transaction.SearchTransactionViewModel)">
+            <summary>
+            Retrieves transactions based on the provided search parameters.
+            </summary>
+            <remarks>
+            Notes:
+            <ul>
+                <li>This endpoint does not require authentication.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.TransactionController.GetTransactionById(System.Int32)">
+            <summary>
+            Gets a transaction by its ID.
+            </summary>
+            <remarks>Notes:
+            <ul>
+                <li>To access this route, it is not necessary to be logged into the system.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.TransactionController.CreateTransaction(ResidentialExpenseControl.Api.ViewModels.Transaction.CreateTransactionViewModel)">
+            <summary>
+            Creates a new transaction in the database.
+            </summary>
+            <remarks>Notes:
+            <ul>
+                <li>To access this route, it is not necessary to be logged into the system.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.TransactionController.UpdateTransaction(ResidentialExpenseControl.Api.ViewModels.Transaction.UpdateTransactionViewModel)">
+            <summary>
+            Updates a transaction in the database.
+            </summary>
+            <remarks>Notes:
+            <ul>
+                <li>To access this route, it is not necessary to be logged into the system.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="M:ResidentialExpenseControl.Api.Controllers.v1.TransactionController.DeleteTransaction(System.Int32)">
+            <summary>
+            Deletes a transaction from the database.
+            </summary>
+            <remarks>Notes:
+            <ul>
+                <li>To access this route, it is not necessary to be logged into the system.</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="T:ResidentialExpenseControl.Api.Filters.CustomModelStateValidationFilterAttribute">
+            <summary>
+            A filter that extracts messages from ModelState and puts them into the API's output format.
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.Swagger.Response.Success">
+            <summary>
+            Indicates whether the operation succeeded.
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.Swagger.Response.Messages">
+            <summary>
+            Messages returned by the operation.
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.Swagger.Response.Result">
+            <summary>
+            Returned payload.
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Category.SearchCategoryViewModel.Id">
+            <summary>
+            Category ID
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Category.SearchCategoryViewModel.Description">
+            <summary>
+            Category description
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Category.SearchCategoryViewModel.PageIndex">
+            <summary>
+            Page index to retrieve (starting from 1)
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Category.SearchCategoryViewModel.PageSize">
+            <summary>
+            Number of records to be returned per page
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Category.SearchCategoryViewModel.OrderBy">
+            <summary>
+            Property name to sort the retrieved records
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Category.SearchCategoryViewModel.OrderDirection">
+            <summary>
+            Sort direction (ASC for ascending; DESC for descending)
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.People.SearchPeopleViewModel.Id">
+            <summary>
+            ID da pessoa
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.People.SearchPeopleViewModel.Name">
+            <summary>
+            Nome da pessoa
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.People.SearchPeopleViewModel.Age">
+            <summary>
+            Idade exata da pessoa
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.People.SearchPeopleViewModel.MinAge">
+            <summary>
+            Idade mínima (inclusive)
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.People.SearchPeopleViewModel.MaxAge">
+            <summary>
+            Idade máxima (inclusive)
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.People.SearchPeopleViewModel.PageIndex">
+            <summary>
+            Index da página que deseja obter (iniciando por 1)
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.People.SearchPeopleViewModel.PageSize">
+            <summary>
+            Quantidade de registros que deverão ser retornados por página
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.People.SearchPeopleViewModel.OrderBy">
+            <summary>
+            Nome da propriedade que se deseja ordenar os registros encontrados
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.People.SearchPeopleViewModel.OrderDirection">
+            <summary>
+            Sentido da ordenação (ASC para crescente; DESC para decrescente)
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Totals.TotalsFilterByCategoryViewModel.PageIndex">
+            <summary>
+            Page index to retrieve (starting from 1)
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Totals.TotalsFilterByCategoryViewModel.PageSize">
+            <summary>
+            Number of records to be returned per page
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Totals.TotalsFilterByCategoryViewModel.OrderBy">
+            <summary>
+            Property name to sort the retrieved records
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Totals.TotalsFilterByCategoryViewModel.OrderDirection">
+            <summary>
+            Sort direction (ASC for ascending; DESC for descending)
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Totals.TotalsFilterByPeopleViewModel.PageIndex">
+            <summary>
+            Page index to retrieve (starting from 1)
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Totals.TotalsFilterByPeopleViewModel.PageSize">
+            <summary>
+            Number of records to be returned per page
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Totals.TotalsFilterByPeopleViewModel.OrderBy">
+            <summary>
+            Property name to sort the retrieved records
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Totals.TotalsFilterByPeopleViewModel.OrderDirection">
+            <summary>
+            Sort direction (ASC for ascending; DESC for descending)
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Transaction.SearchTransactionViewModel.Id">
+            <summary>
+            Transaction ID
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Transaction.SearchTransactionViewModel.Description">
+            <summary>
+            Transaction description (contains)
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Transaction.SearchTransactionViewModel.Amount">
+            <summary>
+            Transaction amount (positive number)
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Transaction.SearchTransactionViewModel.Type">
+            <summary>
+            Transaction type (Expense or Income)
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Transaction.SearchTransactionViewModel.CategoryId">
+            <summary>
+            Category ID associated with the transaction
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Transaction.SearchTransactionViewModel.PersonId">
+            <summary>
+            Person ID associated with the transaction
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Transaction.SearchTransactionViewModel.PageIndex">
+            <summary>
+            Page index to retrieve (starting from 1)
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Transaction.SearchTransactionViewModel.PageSize">
+            <summary>
+            Number of records to be returned per page
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Transaction.SearchTransactionViewModel.OrderBy">
+            <summary>
+            Property name to sort the retrieved records
+            </summary>
+        </member>
+        <member name="P:ResidentialExpenseControl.Api.ViewModels.Transaction.SearchTransactionViewModel.OrderDirection">
+            <summary>
+            Sort direction (ASC for ascending; DESC for descending)
+            </summary>
+        </member>
+    </members>
+</doc>

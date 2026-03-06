@@ -1,10 +1,11 @@
 ﻿using ResidentialExpenseControl.Domain.Commands.Output;
 using Swashbuckle.AspNetCore.Filters;
+using static System.Net.WebRequestMethods;
 
 namespace ResidentialExpenseControl.Api
 {
     /// <summary>
-    /// Response padrão da API para o erro HTTP 400
+    /// Standard API response for HTTP error 400
     /// </summary>
     public class BadRequestApiResponse : Output, IExamplesProvider<Output>
     {

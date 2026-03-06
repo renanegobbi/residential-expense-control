@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 namespace ResidentialExpenseControl.Api.Filters
 {
     /// <summary>
-    /// Filtro que extrai as mensagens do ModelState e coloca no padrão de saida da API.
+    /// A filter that extracts messages from ModelState and puts them into the API's output format.
     /// </summary>
     public class CustomModelStateValidationFilterAttribute : ActionFilterAttribute
     {
