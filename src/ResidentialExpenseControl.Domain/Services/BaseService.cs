@@ -1,25 +1,15 @@
-﻿using ResidentialExpenseControl.Domain.Interfaces;
+﻿using ResidentialExpenseControl.Core.Infrastructure;
 using ResidentialExpenseControl.Domain.Notifications;
 
 namespace ResidentialExpenseControl.Domain.Services
 {
-    public abstract class BaseService
+    public abstract class BaseService : Notifier
     {
-        private readonly INotifier _notifier;
+        protected readonly IUnitOfWork _uow;
 
-        protected BaseService(INotifier notifier)
+        protected BaseService(IUnitOfWork uow)
         {
-            _notifier = notifier;
-        }
-
-        protected void Notify(string message)
-        {
-            _notifier.Handle(new Notification(message));
-        }
-
-        protected bool IsValid()
-        {
-            return !_notifier.HasNotification();
+            _uow = uow;
         }
     }
 }

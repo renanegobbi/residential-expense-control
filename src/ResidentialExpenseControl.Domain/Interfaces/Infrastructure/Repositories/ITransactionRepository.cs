@@ -1,16 +1,17 @@
-﻿using ResidentialExpenseControl.Domain.Entities;
-using System.Collections.Generic;
+﻿using ResidentialExpenseControl.Domain.Commands.Input;
+using ResidentialExpenseControl.Domain.Entities;
+using System;
 using System.Threading.Tasks;
 
 namespace ResidentialExpenseControl.Domain.Interfaces.Infrastructure.Repositories
 {
-    /// <summary>Repository contract for Transaction table.</summary>
+    /// <summary>
+    /// Repository contract for Transaction table.
+    /// </summary>
     public interface ITransactionRepository : IRepository<Transaction>
     {
-        // Useful to show lists with includes (Person/Category) without leaking EF outside
-        Task<List<Transaction>> GetAllWithDetails();
-
-        Task<List<Transaction>> GetByPersonId(int personId);
-        Task<List<Transaction>> GetByCategoryId(int categoryId);
+        Task<Tuple<Transaction[], double>> GetAll(SearchTransactionInput input);
+        Task<bool> ExistsByCategoryId(int categoryId);
+        Task<bool> HasIncomeByPersonId(int personId);
     }
 }
