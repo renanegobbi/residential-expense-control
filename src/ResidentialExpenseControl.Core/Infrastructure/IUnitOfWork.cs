@@ -5,6 +5,6 @@
     /// </summary>
     public interface IUnitOfWork
     {
-        Task<bool> Commit();
+        bool Commit();
     }
 }

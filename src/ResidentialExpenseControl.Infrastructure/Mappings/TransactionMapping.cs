@@ -22,13 +22,11 @@ namespace ResidentialExpenseControl.Infrastructure.Mappings
             builder.Property(t => t.Type)
                 .IsRequired();
 
-            // Relationship: Person (1) -> Transactions (many)
             builder.HasOne(t => t.Person)
                 .WithMany(p => p.Transactions)
                 .HasForeignKey(t => t.PersonId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Relationship: Category (1) -> Transactions (many)
             builder.HasOne(t => t.Category)
                 .WithMany(c => c.Transactions)
                 .HasForeignKey(t => t.CategoryId)

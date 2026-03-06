@@ -15,6 +15,8 @@ namespace ResidentialExpenseControl.Infrastructure.Mappings
                 .HasColumnType("TEXT")
                 .HasMaxLength(400);
 
+            builder.HasIndex(c => c.Description).IsUnique();
+
             builder.Property(c => c.Purpose)
                 .IsRequired();
 

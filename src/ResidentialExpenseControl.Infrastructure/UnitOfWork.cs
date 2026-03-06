@@ -12,9 +12,9 @@ namespace ResidentialExpenseControl.Infrastructure
             _context = context;
         }
 
-        public async Task<bool> Commit()
+        public bool Commit()
         {
-            return await _context.SaveChangesAsync() > 0;
+            return _context.SaveChanges() > 0;
         }
     }
 }
