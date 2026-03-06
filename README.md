@@ -98,3 +98,15 @@ A aplicação foi desenvolvida utilizando **ASP.NET Core Web API** no backend e 
 - O tipo da transação deve ser compatível com a finalidade da categoria.
 - Ao remover uma pessoa, todas as suas transações também são removidas.
 
+## Como usar
+
+### 1. Clonar o repositório
+
+```bash
+git clone https://github.com/seu-usuario/residential-expense-control.git
+cd residential-expense-control
+```
+
+## Licença
+Este projeto está sob a licença do MIT. Consulte a [LICENÇA](https://github.com/TesteReteste/lim/blob/master/LICENSE) para obter mais informações.
+
