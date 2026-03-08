@@ -289,8 +289,7 @@ Existem duas formas de executar o backend:
 
 ### 4.2.1 Visual Studio
 
-- Abra a solução no **Visual Studio** 2022
-- Abrir a solution (**ResidentialExpenseControl.sln**) no Visual Studio.
+- Abra a solução  (**ResidentialExpenseControl.sln**) no **Visual Studio** 2022
 - No Solution Explorer, localizar o projeto **ResidentialExpenseControl.Api** e o defina como projeto de inicialização.
 - No menu superior, selecionar o perfil de execução (por exemplo, **ResidentialExpenseControl - Dev**).
 - Clicar no botão **Run/Play** para iniciar.
