@@ -25,7 +25,7 @@ Sistema completo de gestão de despesas residenciais com .NET 8 Web API, EF Core
     - [4.2.2 .NET CLI](#422-net-cli)
   - [4.3 Executando o Frontend](#43-executando-o-frontend)
 
-- [Licença](#licença)
+- [5. Licença](#5-licença)
 
 ---
 
@@ -326,5 +326,5 @@ npm run dev
 
 - Após iniciar, a aplicação estará disponível em: http://localhost:5173
 
-## Licença
+# 5. Licença
 Este projeto está sob a licença do MIT. Consulte a [LICENÇA](https://github.com/TesteReteste/lim/blob/master/LICENSE) para obter mais informações.
