@@ -327,4 +327,4 @@ npm run dev
 - Após iniciar, a aplicação estará disponível em: http://localhost:5173
 
 # 5. Licença
-Este projeto está sob a licença do MIT. Consulte a [LICENÇA](https://github.com/TesteReteste/lim/blob/master/LICENSE) para obter mais informações.
+Este projeto está sob a licença do MIT. Consulte a [LICENÇA](https://github.com/renanegobbi/residential-expense-control/blob/main/LICENSE) para obter mais informações.
